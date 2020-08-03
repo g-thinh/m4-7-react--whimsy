@@ -8,6 +8,13 @@ export const TweetContext = React.createContext(null);
 //############################ TWEET CONTEXT ##########################
 
 export const TweetProvider = ({ children }) => {
+  //### STATES ###
+
+  const [numOfLikes, setNumOfLikes] = React.useState(460);
+  const [numOfRetweets, setNumOfRetweets] = React.useState(65);
+  const [isLiked, setIsLiked] = React.useState(false);
+  const [isRetweeted, setIsRetweeted] = React.useState(false);
+
   //### VARIABLES ##
   const date = moment().format("h:mm a - MMM Do, YYYY");
 
@@ -19,9 +26,11 @@ export const TweetProvider = ({ children }) => {
         displayName: "Carmen Sandiego ✨",
         username: "carmen-sandiego",
         avatarSrc: avatar,
-        isRetweetedByCurrentUser: false,
-        isLikedByCurrentUser: false,
+        isRetweetedByCurrentUser: isRetweeted,
+        isLikedByCurrentUser: isLiked,
         date: date,
+        numOfLikes,
+        numOfRetweets,
       }}
     >
       {children}
