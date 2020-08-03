@@ -15,6 +15,7 @@ const Tweet = () => {
     avatarSrc,
     isRetweetedByCurrentUser,
     isLikedByCurrentUser,
+    date,
   } = React.useContext(TweetContext);
 
   // #### RENDER TWEET #####
@@ -26,6 +27,7 @@ const Tweet = () => {
         avatarSrc={avatarSrc}
       />
       <TweetContents>{tweetContents}</TweetContents>
+      <Timestamp>{date}</Timestamp>
       <Divider />
       <ActionBar
         isRetweetedByCurrentUser={isRetweetedByCurrentUser}
