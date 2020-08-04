@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   display: block;
   position: absolute;
   border-radius: 50%;
-  animation: ${scale} 500ms forwards, ${fade} 300ms ease-in forwards;
+  animation: ${scale} 500ms forwards, ${fade} 500ms ease-in forwards;
 `;
 
 export default PoppingCircle;
