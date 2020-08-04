@@ -30,7 +30,13 @@ export const TweetProvider = ({ children }) => {
         isLikedByCurrentUser: isLiked,
         date: date,
         numOfLikes,
+        setNumOfLikes,
         numOfRetweets,
+        setNumOfRetweets,
+        isLiked,
+        setIsLiked,
+        isRetweeted,
+        setIsRetweeted,
       }}
     >
       {children}
